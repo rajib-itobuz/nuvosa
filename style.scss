@@ -1,0 +1,350 @@
+$body_bg: #f5f5f5;
+$body_secondary: #fff;
+$secondary_accent: #6f77f1;
+$text-secondary-color: #828282;
+$text-tertiary-color: #666565;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.active-start{
+  width: 70%;
+  height: 2px;
+  background: $secondary_accent;
+}
+.active-end{
+  width: 23%;
+  height: 2px;
+  background: $secondary_accent;
+}
+
+.w-75 {
+  width: 100% !important;
+}
+
+.w-50 {
+  width: 100% !important;
+}
+
+.business {
+  background: url(images/business/background.svg) no-repeat center;
+  background-size: cover;
+}
+
+.bg-primary {
+  background-color: $body_bg !important;
+}
+
+.bg-tertiary {
+  background-color: $secondary_accent !important;
+}
+
+.bg-secondary {
+  background-color: $body_secondary !important;
+}
+
+.font-text-secondary {
+  color: $text-secondary-color;
+}
+
+.font-tertiary {
+  color: $text-tertiary-color;
+}
+
+.font-secondary {
+  color: $secondary_accent !important;
+}
+
+.border-primary {
+  border: 2px solid $secondary_accent !important;
+}
+
+.bg-offwhite {
+  background-color: #fafafa;
+}
+
+.bg-number {
+  font-size: 229px;
+  color: rgb(217, 217, 231) !important;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.circle-small {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.translate-middle-1 {
+  transform: translate(-50%, 50%);
+}
+
+.fit-content {
+  width: fit-content;
+  height: fit-content;
+}
+
+.hero-img {
+  background: url(images/hero/hero.png) no-repeat center;
+  background-size: contain;
+  height: 500px;
+}
+
+.btn-danger {
+  background-color: #fad725;
+
+  &:hover{
+    color: white !important;
+    background-color: rgb(197, 57, 7);
+  }
+}
+
+.rounded-card-2 {
+  border-radius: 2px;
+}
+
+.rounded-card-4 {
+  border-radius: 4px;
+}
+
+.hover-card {
+  transition: transform 200ms ease;
+
+  &:hover {
+    transform: translate(0px, -2px);
+    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+  }
+}
+
+// .hover-card-2{
+
+//   transition: transform 200ms ease;
+
+//   &:hover{
+//     *{
+//       color: white;
+//     }
+
+//     background: $secondary_accent;
+//     transform: translate(0px,-2px) scaleY(1.05);
+//     box-shadow:0px 20px 24px -4px rgba(17, 24, 39, 0.1), 0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+//   }
+// }
+
+.hover-card-3 {
+  transition: transform 200ms ease;
+
+  &:hover {
+    color: $secondary_accent;
+    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+    
+  }
+
+  .icons img:hover {
+    filter: invert(39%) sepia(89%) saturate(469%) hue-rotate(199deg)
+      brightness(106%) contrast(89%);
+  }
+}
+
+.hover-card-4{
+  transition: all 200ms ease;
+  border-bottom: 4px solid transparent;
+
+  &:hover {
+    background: white !important;
+    border-bottom: 4px solid $secondary_accent;
+    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+    
+  }
+}
+
+
+/* font-sizes */
+.font-15 {
+  font-size: 0.625rem;
+}
+
+.font-17 {
+  font-size: 0.81rem;
+}
+
+.font-20 {
+  font-size: 1rem;
+}
+
+.font-24 {
+  font-size: 1.1rem;
+}
+
+.font-38 {
+  font-size: 1.3rem;
+}
+
+.font-45 {
+  font-size: 2.2rem;
+}
+
+.font-55 {
+  font-size: 2.4rem;
+}
+
+.font-90 {
+  font-size: 2.8rem;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.rotate-card {
+  transform: rotate(-5deg);
+}
+
+.glassmorphism {
+  backdrop-filter: blur(25px);
+  box-shadow: 0px 3.1695501804351807px 52.297576904296875px 0px #0000001a;
+}
+
+.team-card {
+  width: 240px;
+  bottom: 50%;
+}
+
+.overlap-me {
+  margin-left: -8%;
+}
+
+// optimize section
+.optimize {
+  .card {
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+
+    &:hover {
+      background: #fff !important;
+      border-bottom: 2px solid $secondary_accent !important;
+      box-shadow: 0px 10px 14px 2px rgba(14, 17, 60, 0.03);
+    }
+  }
+}
+
+.pricing-button{
+  border: 1px solid #212528 ;
+  background-color: transparent;
+}
+
+.vr{
+  visibility: hidden;
+}
+
+.testimony-card{
+  max-width: 245px;
+}
+
+
+.price-card{
+  transition: transform 200ms ease;
+  &:hover{
+    *{
+      color: white;
+    }
+
+    .pricing-button{
+      background-color: #FAD725;
+      border: 1px solid #FAD725;
+      color: black !important;
+    }
+
+    background: url(images/pricing/pricing_background.svg) center;
+    background-size: stretch;
+    transform: scale(1.05);
+  }
+}
+
+
+@media screen and (min-width:576px) {
+  .price-card:hover{
+    background: #6f77f1;
+  }
+}
+
+
+/* 768px */
+@media screen and (min-width: 768px) {
+
+
+  .testimony-card{
+    max-width: 500px;
+  }
+
+  .w-75 {
+    width: 85% !important;
+  }
+
+  .vr{
+    visibility: visible !important;
+  }
+  
+  .font-90 {
+    font-size: 2.5rem;
+  }
+  
+  .font-20 {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .price-card:hover{
+    *{
+      color: white !important;
+    }
+    background: url(images/pricing/pricing_background.svg) center;
+    background-size: stretch;
+  }
+
+  .vr{
+    visibility: hidden !important;
+  }
+  
+  .w-50{
+    width: 75% !important;
+  }
+
+  .font-90 {
+    font-size: 3rem;
+  }
+
+  .col-sm-4{
+    max-width: 420px;
+    aspect-ratio: 1.54;
+  }
+
+  .font-20{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .font-90 {
+    font-size: 3.8rem;
+  }
+
+}
+
