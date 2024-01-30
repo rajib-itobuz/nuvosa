@@ -306,6 +306,26 @@ body {
   margin-left: -8%;
 }
 
+.nav-item:hover::before {
+  content: "";
+  position: absolute !important;
+  left: 0px;
+  bottom: 0px;
+  width: 75%;
+  background: #6f77f1;
+  height: 2px;
+}
+
+.nav-item:hover::after {
+  content: "";
+  position: absolute !important;
+  right: 0px;
+  bottom: 0px;
+  width: 20%;
+  background: #6f77f1;
+  height: 2px;
+}
+
 .team-card {
   bottom: 0;
   transform: translateY(60%);

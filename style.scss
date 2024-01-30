@@ -331,6 +331,28 @@ body {
 
 
 
+// nav section
+
+.nav-item:hover::before{
+  content: "";
+  position: absolute !important;
+  left: 0px;
+  bottom:0px;
+  width: 75%;
+  background: $secondary_accent;
+  height: 2px;
+}
+.nav-item:hover::after{
+  content: "";
+  position: absolute !important;
+  right: 0px;
+  bottom:0px;
+  width: 20%;
+  background: $secondary_accent;
+  height: 2px;
+}
+
+
 // team section
 
 .team-card {
