@@ -227,7 +227,7 @@ body {
 }
 
 .hover-card {
-  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease;
 }
 .hover-card:hover {
   box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1), 0px 8px 8px -4px rgba(17, 24, 39, 0.04);
@@ -235,7 +235,7 @@ body {
 }
 
 .hover-card-3 {
-  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease;
 }
 .hover-card-3:hover {
   color: #6f77f1;
@@ -246,7 +246,7 @@ body {
 }
 
 .hover-card-4 {
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease;
   border-bottom: 4px solid transparent;
 }
 .hover-card-4:hover {
@@ -373,7 +373,7 @@ body {
 }
 
 .price-card {
-  transition: transform 600ms ease-in-out;
+  transition: transform 0.2s ease;
 }
 .price-card:hover {
   background: url(images/pricing/pricing-background.svg) center;
