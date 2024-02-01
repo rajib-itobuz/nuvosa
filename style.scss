@@ -94,7 +94,7 @@ body {
 
 
 
-
+/* global classes */
 .bg-input {
   background-color: #dfdfdf;
 }
@@ -129,15 +129,11 @@ body {
   color: #6f6f6f;
 }
 
-.bg-primary {
-  background-color: $body_bg !important;
-}
-
 .bg-tertiary {
   background-color: $secondary_accent !important;
 }
 
-.bg-secondary {
+.bg-mysecondary {
   background-color: $body_secondary !important;
 }
 
@@ -157,8 +153,8 @@ body {
   color: $secondary_accent !important;
 }
 
-.border-primary {
-  border: 2px solid $secondary_accent !important;
+.border-myprimary {
+  border: 2px solid $secondary_accent;
 }
 
 .bg-offwhite {
@@ -215,15 +211,15 @@ body {
   background: $secondary_accent;
 }
 
-.w-75 {
+.mw-75 {
   width: 100% !important;
 }
 
-.w-50 {
+.mw-50 {
   width: 100% !important;
 }
 
-.btn-danger {
+.btn-custom {
   background-color: #fad725;
 
   &:hover {
@@ -250,7 +246,6 @@ body {
   }
 }
 
-
 .hover-card-3 {
   transition: transform 200ms ease;
 
@@ -276,6 +271,8 @@ body {
       0px 8px 8px -4px rgba(17, 24, 39, 0.04);
   }
 }
+
+
 
 /* font-sizes */
 .font-15 {
@@ -328,8 +325,6 @@ body {
 }
 
 
-
-
 // nav section
 
 .nav-item:hover::before {
@@ -371,15 +366,11 @@ body {
 }
 
 
-
-
 //business
 .business {
   background: url(images/business/background.svg) no-repeat center;
   background-size: cover;
 }
-
-
 
 .hero-img {
   background: url(images/hero/hero.png) no-repeat center;
@@ -445,7 +436,7 @@ body {
 }
 
 
-
+/* 576px */
 @media screen and (min-width: 576px) {
   .price-card:hover {
     background: #6f77f1;
@@ -471,7 +462,7 @@ body {
 
   }
 
-  .w-75 {
+  .mw-75 {
     width: 85% !important;
   }
 
@@ -488,6 +479,8 @@ body {
   }
 }
 
+
+// 992px
 @media screen and (min-width: 992px) {
   .team-card {
     scale: 0.8;
@@ -515,7 +508,7 @@ body {
     visibility: hidden !important;
   }
 
-  .w-50 {
+  .mw-50 {
     width: 75% !important;
   }
 
@@ -542,7 +535,3 @@ body {
     font-size: 3.6rem;
   }
 }
-
-
-
-/* global classes */
