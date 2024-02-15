@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 html {
   font-size: 16px;
 }
@@ -210,6 +211,7 @@ body {
 .btn-custom {
   background-color: #fad725;
 }
+
 .btn-custom:hover {
   color: white !important;
   background-color: #BC424E;
@@ -226,6 +228,7 @@ body {
 .hover-card {
   transition: transform 200ms ease;
 }
+
 .hover-card:hover {
   box-shadow: 0px 34px 50px -17px rgba(2, 24, 5, 0.1);
   transform: translate(0px, -2px);
@@ -234,10 +237,12 @@ body {
 .hover-card-3 {
   transition: transform 200ms ease;
 }
+
 .hover-card-3:hover {
   color: #6f77f1;
   box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1), 0px 8px 8px -4px rgba(17, 24, 39, 0.04);
 }
+
 .hover-card-3 .icons img:hover {
   filter: invert(39%) sepia(89%) saturate(469%) hue-rotate(199deg) brightness(106%) contrast(89%);
 }
@@ -246,6 +251,7 @@ body {
   transition: all 200ms ease;
   border-bottom: 4px solid transparent;
 }
+
 .hover-card-4:hover {
   background: white !important;
   border-bottom: 4px solid #6f77f1;
@@ -295,7 +301,7 @@ body {
 
 .glassmorphism {
   -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
   box-shadow: 0px 3.1695501804px 52.2975769043px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
@@ -328,9 +334,11 @@ body {
   transform: translateY(60%);
   scale: 0.8;
 }
+
 .team-card div {
   width: 195px;
 }
+
 .team-card div img:not(:first-child) {
   margin-left: -8%;
 }
@@ -350,6 +358,7 @@ body {
   border: none !important;
   border-bottom: 2px solid transparent !important;
 }
+
 .optimize .card:hover {
   background: #fff !important;
   border-bottom: 2px solid #6f77f1 !important;
@@ -372,17 +381,21 @@ body {
 .price-card {
   transition: transform 0.2s ease;
 }
+
 .price-card:hover {
   background: url(images/pricing/pricing-background.svg) center;
   background-size: stretch;
   transform: scale(1.05);
 }
+
 .price-card:hover * {
   color: white !important;
 }
+
 .price-card:hover .pricing-button {
   border: 1px solid white;
 }
+
 .price-card .pricing-button:hover {
   background-color: #fad725;
   border: 1px solid #fad725;
@@ -398,15 +411,18 @@ body {
   .price-card:hover {
     background: #6f77f1;
   }
+
   .spanning-card {
     max-width: 100%;
   }
 }
+
 /* 768px */
 @media screen and (min-width: 768px) {
   .testimony-card {
     max-width: 500px;
   }
+
   .team-card {
     width: -moz-fit-content;
     width: fit-content;
@@ -414,58 +430,76 @@ body {
     transform: translateX(-30%);
     scale: 0.55;
   }
+
   .mw-75 {
     width: 85% !important;
   }
+
   .vr {
     visibility: visible !important;
   }
+
   .font-90 {
     font-size: 2.5rem;
   }
+
   .font-20 {
     font-size: 0.85rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .team-card {
     scale: 0.8;
   }
+
   .spanning-card {
     max-width: 300px;
   }
+
   .price-card {
     max-width: 300px;
   }
+
   .price-card:hover {
     background: url(images/pricing/pricing-background.svg) center;
     background-size: stretch;
   }
+
   .price-card:hover * {
     color: white !important;
   }
+
   .vr {
     visibility: hidden !important;
   }
+
   .mw-50 {
     width: 75% !important;
   }
+
   .font-90 {
     font-size: 3rem;
   }
+
   .col-sm-4 {
     max-width: 420px;
     aspect-ratio: 1.54;
   }
+
   .font-20 {
     font-size: 1rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .team-card {
     scale: 1.1;
   }
+
   .font-90 {
     font-size: 3.6rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
