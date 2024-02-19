@@ -1,12 +1,15 @@
-$body_bg: #f5f5f5;
-$body_secondary: #fff;
-$secondary_accent: #6f77f1;
-$text-primary: #212528;
-$primary-red: #BC424E;
-$text-secondary-color: #828282;
 $span-red: #d1563b;
 $span-green: #3BD165;
 $span-yellow: #F7C745;
+$primary-red: #BC424E;
+
+
+$body_bg: #f5f5f5;
+$custom-button: #fad725;
+$body_secondary: #fff;
+$secondary_accent: #6f77f1;
+$text-primary: #212528;
+$text-secondary-color: #828282;
 $text-tertiary-color: #727272;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -76,14 +79,6 @@ body {
   background: #CEE5D2;
 }
 
-.vector-team {
-  left: 20%;
-  transform: translate(0%, -50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  background: #CEE5D2;
-}
-
 .vector-grow {
   left: 33%;
   transform: translate(0%, -20%);
@@ -93,16 +88,206 @@ body {
 }
 
 
+/*! themeing Classes */
+
+@mixin material-color($body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_offwhite, $hover_color) {
+  .stats-title {
+    color: #665565;
+  }
+
+  body,
+  section:not(.business),
+  nav,
+  footer {
+    background: $body_secondary;
+  }
+
+  .stats-text {
+    color: #6f6f6f;
+  }
+
+  .bg-input {
+    background-color: #dfdfdf;
+    opacity: 0.5;
+  }
+
+  .input-text-color::placeholder {
+    color: #b6b6b6;
+  }
+
+  .bg-tertiary {
+    background-color: $secondary_accent !important;
+  }
+
+  .bg-mysecondary {
+    background-color: $body_secondary !important;
+  }
+
+  .font-text-secondary {
+    color: $text-secondary-color;
+  }
+
+  .font-primary {
+    color: $text-primary;
+  }
+
+  .font-text-tertiary {
+    color: $text-tertiary-color;
+  }
+
+  .font-secondary {
+    color: $secondary_accent;
+  }
+
+  .border-myprimary {
+    border: 2px solid $secondary_accent;
+  }
+
+  .bg-offwhite {
+    background-color: $body_offwhite;
+  }
+
+  .bg-primary-red {
+    background-color: $primary-red;
+  }
+
+  .fill-secondary {
+    background: #e9e9e9 !important;
+  }
+
+  .fill-primary {
+    background: $secondary_accent !important;
+  }
+
+  .btn-custom {
+    background-color: $custom-button;
+
+    &:hover {
+      color: white !important;
+      background-color: $primary-red;
+    }
+  }
+
+  .nav-item:hover::after,
+  .nav-item:hover::before {
+    background: $secondary_accent;
+  }
+
+  .hover-card-4 {
+    transition: all 200ms ease;
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+      background: $hover_color !important;
+      border-bottom: 4px solid $secondary_accent;
+      box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+        0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+    }
+  }
+
+  .card:not(.price-card) {
+    background-color: $body_secondary !important;
+  }
+
+  .price-card {
+    background-color: $body_secondary;
+
+    * {
+      color: $text-primary;
+    }
+  }
+
+  .hover-card-3 {
+    color: $text-primary;
+  }
+
+  .icons img:hover {
+    filter: $filter;
+  }
+
+  .hover-card-3:hover {
+    color: $secondary_accent;
+    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+  }
+
+  .btn-talk {
+    border: 2px solid $text-primary;
+    color: $text-primary;
+
+    &:hover {
+      border: 2px solid $body_bg;
+      background-color: $body_bg;
+      color: $text-primary;
+    }
+  }
+}
+
+body.theme-default {
+  $filter: brightness(0) saturate(100%) invert(46%) sepia(26%) saturate(1585%) hue-rotate(200deg) brightness(101%) contrast(89%);
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #Fafafa, #fff;
+  @include material-color($theme...)
+}
+
+body.theme-teal {
+  $body_bg: #f5f5f5;
+  $body_secondary: #fff;
+  $secondary_accent: #0081a7;
+  $text-primary: #212528;
+  $text-secondary-color: #828282;
+  $text-tertiary-color: #727272;
+  $custom-button: #00afb9;
+  $filter: brightness(0) saturate(100%) invert(28%) sepia(87%) saturate(1650%) hue-rotate(169deg) brightness(96%) contrast(102%);
+
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff;
+  @include material-color($theme...)
+}
+
+body.theme-pink {
+  $body_bg: #f5f5f5;
+  $body_secondary: #fff;
+  $secondary_accent: #da627d;
+  $custom-button: #ffb3c1;
+  $text-primary: #212528;
+  $text-secondary-color: #828282;
+  $text-tertiary-color: #727272;
+  $filter: brightness(0) saturate(100%) invert(61%) sepia(63%) saturate(2507%) hue-rotate(307deg) brightness(90%) contrast(89%);
+
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff;
+  @include material-color($theme...)
+}
+
+body.theme-dark {
+  $body_bg: #4a4e69;
+  $body_secondary: #14213d;
+  $secondary_accent: #d66853;
+  $custom-button: #fca311;
+  $text-primary: #fff;
+  $text-secondary-color: #f2f2f2;
+  $text-tertiary-color: #a2a2a2;
+  $filter: brightness(0) saturate(100%) invert(61%) sepia(63%) saturate(2507%) hue-rotate(307deg) brightness(90%) contrast(89%);
+
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_secondary, $body_bg;
+  @include material-color($theme...);
+
+  .vector-title,
+  .vector-title-2,
+  .vector-title-3,
+  .vector-testing,
+  .vector-grow-2,
+  .vector-choose,
+  .vector-grow .vector-team {
+    opacity: 0.3;
+  }
+
+  .business {
+    background: $body_secondary;
+  }
+}
+
+
 
 /* global classes */
-.bg-input {
-  background-color: #dfdfdf;
-}
-
-.input-text-color::placeholder {
-  color: #b6b6b6;
-}
-
 .active-hover:hover {
   div {
     visibility: visible !important;
@@ -121,50 +306,6 @@ body {
   background-color: $span-green;
 }
 
-.stats-title {
-  color: #665565;
-}
-
-.stats-text {
-  color: #6f6f6f;
-}
-
-.bg-tertiary {
-  background-color: $secondary_accent !important;
-}
-
-.bg-mysecondary {
-  background-color: $body_secondary !important;
-}
-
-.font-text-secondary {
-  color: $text-secondary-color;
-}
-
-.font-primary {
-  color: $text-primary;
-}
-
-.font-text-tertiary {
-  color: $text-tertiary-color;
-}
-
-.font-secondary {
-  color: $secondary_accent !important;
-}
-
-.border-myprimary {
-  border: 2px solid $secondary_accent;
-}
-
-.bg-offwhite {
-  background-color: #fafafa;
-}
-
-.bg-primary-red {
-  background-color: $primary-red;
-}
-
 .bg-number {
   font-size: 229px;
   color: rgb(217, 217, 231) !important;
@@ -180,14 +321,6 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-}
-
-.fill-secondary {
-  background: #e9e9e9 !important;
-}
-
-.fill-primary {
-  background: $secondary_accent !important;
 }
 
 .translate-middle-1 {
@@ -219,13 +352,8 @@ body {
   width: 100% !important;
 }
 
-.btn-custom {
-  background-color: #fad725;
-
-  &:hover {
-    color: white !important;
-    background-color: $primary-red;
-  }
+section {
+  outline: none;
 }
 
 .rounded-card-2 {
@@ -248,30 +376,11 @@ body {
 
 .hover-card-3 {
   transition: transform 200ms ease;
-
-  &:hover {
-    color: $secondary_accent;
-    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
-      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
-  }
-
-  .icons img:hover {
-    filter: invert(39%) sepia(89%) saturate(469%) hue-rotate(199deg) brightness(106%) contrast(89%);
-  }
 }
 
-.hover-card-4 {
-  transition: all 200ms ease;
-  border-bottom: 4px solid transparent;
-
-  &:hover {
-    background: white !important;
-    border-bottom: 4px solid $secondary_accent;
-    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
-      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
-  }
+.button-hover-text:hover {
+  color: white;
 }
-
 
 
 /* font-sizes */
@@ -333,7 +442,6 @@ body {
   left: 0px;
   bottom: 0px;
   width: 75%;
-  background: $secondary_accent;
   height: 2px;
 }
 
@@ -343,7 +451,6 @@ body {
   right: 0px;
   bottom: 0px;
   width: 20%;
-  background: $secondary_accent;
   height: 2px;
 }
 
@@ -420,7 +527,6 @@ body {
     }
 
     background: url(images/pricing/pricing-background.svg) center;
-    background-size: stretch;
     transform: scale(1.05);
   }
 
@@ -439,7 +545,7 @@ body {
 /* 576px */
 @media screen and (min-width: 576px) {
   .price-card:hover {
-    background: #6f77f1;
+    background: #6f77f1 !important;
   }
 
   .spanning-card {
