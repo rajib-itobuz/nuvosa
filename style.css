@@ -510,6 +510,9 @@ body.theme-dark .vector-grow .vector-team {
 body.theme-dark .business {
   background: #14213d;
 }
+body.theme-dark .btn-tour {
+  filter: invert(100%);
+}
 
 /* global classes */
 .active-hover:hover div {

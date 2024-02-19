@@ -28,4 +28,4 @@ selectTheme.addEventListener("change", (e) => {
   }
 });
 
-findAndReplaceThemeClass(document.body.classList, "theme-dark");
+findAndReplaceThemeClass(document.body.classList, "theme-default");

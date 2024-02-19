@@ -287,6 +287,10 @@ body.theme-dark {
   .business {
     background: $body_secondary;
   }
+
+  .btn-tour {
+    filter: invert(100%);
+  }
 }
 
 
