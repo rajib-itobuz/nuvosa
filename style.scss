@@ -90,9 +90,13 @@ body {
 
 /*! themeing Classes */
 
-@mixin material-color($body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_offwhite, $hover_color) {
+@mixin material-color($body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_offwhite, $hover_color, $stats-title, $stats-text) {
   .stats-title {
-    color: #665565;
+    color: $stats-title;
+  }
+
+  .stats-text {
+    color: $stats-text;
   }
 
   body,
@@ -100,10 +104,6 @@ body {
   nav,
   footer {
     background: $body_secondary;
-  }
-
-  .stats-text {
-    color: #6f6f6f;
   }
 
   .bg-input {
@@ -195,6 +195,10 @@ body {
     * {
       color: $text-primary;
     }
+
+    &:hover {
+      background-color: #6f77f1;
+    }
   }
 
   .hover-card-3 {
@@ -225,7 +229,7 @@ body {
 
 body.theme-default {
   $filter: brightness(0) saturate(100%) invert(46%) sepia(26%) saturate(1585%) hue-rotate(200deg) brightness(101%) contrast(89%);
-  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #Fafafa, #fff;
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #Fafafa, #fff, #665565, #6f6f6f;
   @include material-color($theme...)
 }
 
@@ -239,7 +243,7 @@ body.theme-teal {
   $custom-button: #00afb9;
   $filter: brightness(0) saturate(100%) invert(28%) sepia(87%) saturate(1650%) hue-rotate(169deg) brightness(96%) contrast(102%);
 
-  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff;
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff, #665565, #6f6f6f;
   @include material-color($theme...)
 }
 
@@ -253,7 +257,7 @@ body.theme-pink {
   $text-tertiary-color: #727272;
   $filter: brightness(0) saturate(100%) invert(61%) sepia(63%) saturate(2507%) hue-rotate(307deg) brightness(90%) contrast(89%);
 
-  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff;
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, #fafafa, #fff, #665565, #6f6f6f;
   @include material-color($theme...)
 }
 
@@ -267,7 +271,7 @@ body.theme-dark {
   $text-tertiary-color: #a2a2a2;
   $filter: brightness(0) saturate(100%) invert(61%) sepia(63%) saturate(2507%) hue-rotate(307deg) brightness(90%) contrast(89%);
 
-  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_secondary, $body_bg;
+  $theme: $body_bg, $body_secondary, $secondary_accent, $text-primary, $text-tertiary-color, $text-secondary-color, $custom-button, $filter, $body_secondary, $body_bg, $text-secondary-color, $text-tertiary-color;
   @include material-color($theme...);
 
   .vector-title,
@@ -545,7 +549,7 @@ section {
 /* 576px */
 @media screen and (min-width: 576px) {
   .price-card:hover {
-    background: #6f77f1 !important;
+    background: #6f77f1;
   }
 
   .spanning-card {

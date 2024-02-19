@@ -74,14 +74,14 @@ body {
 body.theme-default .stats-title {
   color: #665565;
 }
+body.theme-default .stats-text {
+  color: #6f6f6f;
+}
 body.theme-default body,
 body.theme-default section:not(.business),
 body.theme-default nav,
 body.theme-default footer {
   background: #fff;
-}
-body.theme-default .stats-text {
-  color: #6f6f6f;
 }
 body.theme-default .bg-input {
   background-color: #dfdfdf;
@@ -155,6 +155,9 @@ body.theme-default .price-card {
 body.theme-default .price-card * {
   color: #212528;
 }
+body.theme-default .price-card:hover {
+  background-color: #6f77f1;
+}
 body.theme-default .hover-card-3 {
   color: #212528;
 }
@@ -178,14 +181,14 @@ body.theme-default .btn-talk:hover {
 body.theme-teal .stats-title {
   color: #665565;
 }
+body.theme-teal .stats-text {
+  color: #6f6f6f;
+}
 body.theme-teal body,
 body.theme-teal section:not(.business),
 body.theme-teal nav,
 body.theme-teal footer {
   background: #fff;
-}
-body.theme-teal .stats-text {
-  color: #6f6f6f;
 }
 body.theme-teal .bg-input {
   background-color: #dfdfdf;
@@ -259,6 +262,9 @@ body.theme-teal .price-card {
 body.theme-teal .price-card * {
   color: #212528;
 }
+body.theme-teal .price-card:hover {
+  background-color: #6f77f1;
+}
 body.theme-teal .hover-card-3 {
   color: #212528;
 }
@@ -282,14 +288,14 @@ body.theme-teal .btn-talk:hover {
 body.theme-pink .stats-title {
   color: #665565;
 }
+body.theme-pink .stats-text {
+  color: #6f6f6f;
+}
 body.theme-pink body,
 body.theme-pink section:not(.business),
 body.theme-pink nav,
 body.theme-pink footer {
   background: #fff;
-}
-body.theme-pink .stats-text {
-  color: #6f6f6f;
 }
 body.theme-pink .bg-input {
   background-color: #dfdfdf;
@@ -363,6 +369,9 @@ body.theme-pink .price-card {
 body.theme-pink .price-card * {
   color: #212528;
 }
+body.theme-pink .price-card:hover {
+  background-color: #6f77f1;
+}
 body.theme-pink .hover-card-3 {
   color: #212528;
 }
@@ -384,16 +393,16 @@ body.theme-pink .btn-talk:hover {
 }
 
 body.theme-dark .stats-title {
-  color: #665565;
+  color: #f2f2f2;
+}
+body.theme-dark .stats-text {
+  color: #a2a2a2;
 }
 body.theme-dark body,
 body.theme-dark section:not(.business),
 body.theme-dark nav,
 body.theme-dark footer {
   background: #14213d;
-}
-body.theme-dark .stats-text {
-  color: #6f6f6f;
 }
 body.theme-dark .bg-input {
   background-color: #dfdfdf;
@@ -466,6 +475,9 @@ body.theme-dark .price-card {
 }
 body.theme-dark .price-card * {
   color: #fff;
+}
+body.theme-dark .price-card:hover {
+  background-color: #6f77f1;
 }
 body.theme-dark .hover-card-3 {
   color: #fff;
@@ -733,7 +745,7 @@ section {
 /* 576px */
 @media screen and (min-width: 576px) {
   .price-card:hover {
-    background: #6f77f1 !important;
+    background: #6f77f1;
   }
   .spanning-card {
     max-width: 100%;
